@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  /* 사주의 길 색상 체계: 딥네이비/먹색 바탕 + 금색 포인트 */
+  --color-night-950: #080d18;
+  --color-night-900: #0b1220;
+  --color-night-800: #111a2c;
+  --color-night-700: #16213a;
+  --color-night-600: #243049;
+  --color-night-500: #34425e;
+
+  --color-gold-300: #e6c878;
+  --color-gold-400: #d9b35a;
+  --color-gold-500: #c9a227;
+  --color-gold-600: #a8861f;
+
+  --color-paper-100: #ede9df;
+  --color-paper-200: #e8e6e0;
+  --color-paper-400: #b6bdc9;
+  --color-paper-500: #98a2b5;
+
+  /* 오행 색 (어두운 배경 위에서 차분하게) */
+  --color-el-wood: #6fae7c;
+  --color-el-fire: #c9706b;
+  --color-el-earth: #c2a05e;
+  --color-el-metal: #c4c9d4;
+  --color-el-water: #6e93c4;
+
+  --font-serif-kr: var(--font-serif-kr), "Noto Serif KR", serif;
+  --font-sans-kr: var(--font-sans-kr), "Noto Sans KR", sans-serif;
+}
+
+body {
+  background: var(--color-night-900);
+  color: var(--color-paper-200);
+  font-family: var(--font-sans-kr);
+}
+
+::selection {
+  background: var(--color-gold-500);
+  color: var(--color-night-900);
+}

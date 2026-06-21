@@ -1,0 +1,22 @@
+{
+  "목": {
+    "excess": { "id": "el-목-과다", "text": "" },
+    "deficient": { "id": "el-목-부족", "text": "" }
+  },
+  "화": {
+    "excess": { "id": "el-화-과다", "text": "" },
+    "deficient": { "id": "el-화-부족", "text": "" }
+  },
+  "토": {
+    "excess": { "id": "el-토-과다", "text": "" },
+    "deficient": { "id": "el-토-부족", "text": "" }
+  },
+  "금": {
+    "excess": { "id": "el-금-과다", "text": "" },
+    "deficient": { "id": "el-금-부족", "text": "" }
+  },
+  "수": {
+    "excess": { "id": "el-수-과다", "text": "" },
+    "deficient": { "id": "el-수-부족", "text": "" }
+  }
+}

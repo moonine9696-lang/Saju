@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(npm *)",
+      "PowerShell(Set-Content *)",
+      "PowerShell(npm run *)",
+      "PowerShell(Copy-Item *)",
+      "PowerShell(npx tsx scripts/generate-interpretation-skeleton.ts)",
+      "PowerShell(python --version; python -c \"import korean_lunar_calendar; print\\('korean_lunar_calendar OK'\\)\")",
+      "PowerShell(pip install *)",
+      "Bash(grep -v '^$')",
+      "Bash(npm run *)",
+      "Bash(npm test *)",
+      "Bash(cd *)",
+      "Bash(node -e ' *)",
+      "Bash(kill %1)",
+      "Bash(npx tsx -e ' *)"
+    ]
+  }
+}
