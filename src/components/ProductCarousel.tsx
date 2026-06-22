@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
-  Coins, Heart, Waves, Gem, Link2, Star, Briefcase, HeartHandshake, Crown,
+  PiggyBank, Heart, Waves, Gem, Link2, Star, Briefcase, HeartHandshake, Crown,
   ChevronLeft, ChevronRight, type LucideIcon,
 } from "lucide-react";
 import { PRODUCTS } from "@/lib/products";
@@ -13,7 +13,7 @@ const ROTATE_MS = 2500;
 
 /** 상품별 아이콘 + 배경 그라데이션 + 아이콘 색 (넘어갈 때 시각적으로 구분되게) */
 const STYLE: Record<string, { grad: string; icon: LucideIcon; color: string }> = {
-  jaemul: { grad: "from-[#3a2c10] to-[#0b1220]", icon: Coins, color: "text-amber-300" },
+  jaemul: { grad: "from-[#3a2c10] to-[#0b1220]", icon: PiggyBank, color: "text-amber-300" },
   yeonae: { grad: "from-[#3a1626] to-[#0b1220]", icon: Heart, color: "text-rose-300" },
   daeun: { grad: "from-[#102a3a] to-[#0b1220]", icon: Waves, color: "text-sky-300" },
   gyeolhon: { grad: "from-[#311a3a] to-[#0b1220]", icon: Gem, color: "text-fuchsia-300" },
