@@ -81,9 +81,28 @@ export default function ProductCarousel() {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <p className="mb-3 text-center text-xs tracking-[0.2em] text-gold-400">상품 둘러보기</p>
+      {/* 컨트롤 줄: 화살표를 카드 위쪽 좌·우에 배치 (카드 내용과 겹치지 않음) */}
+      <div className="mb-3 flex items-center justify-between gap-3">
+        <button
+          type="button"
+          onClick={() => go(active - 1)}
+          aria-label="이전 상품"
+          className="rounded-full border border-night-600 bg-night-800/80 p-2 text-paper-100 transition-colors hover:border-gold-500/60 hover:text-gold-300"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
+        <p className="text-xs tracking-[0.2em] text-gold-400">상품 둘러보기</p>
+        <button
+          type="button"
+          onClick={() => go(active + 1)}
+          aria-label="다음 상품"
+          className="rounded-full border border-night-600 bg-night-800/80 p-2 text-paper-100 transition-colors hover:border-gold-500/60 hover:text-gold-300"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </button>
+      </div>
 
-      <div className="relative">
+      <div>
         <div
           ref={viewport}
           className="h-[42vh] min-h-72 overflow-hidden rounded-3xl border border-night-600/60"
@@ -104,8 +123,8 @@ export default function ProductCarousel() {
               return (
                 <Link
                   key={p.id}
-                  href={`/product/${p.id}`}
-                  aria-label={`${p.name} 보러 가기`}
+                  href={`/order?product=${p.id}`}
+                  aria-label={`${p.name} 신청하기`}
                   draggable={false}
                   onClick={(e) => {
                     if (moved.current) e.preventDefault(); // 스와이프였으면 이동 막기
@@ -142,7 +161,7 @@ export default function ProductCarousel() {
                         )}
                         <span className="text-2xl font-bold text-paper-100">{formatPrice(p.price)}</span>
                       </div>
-                      <span className="text-sm font-medium text-gold-300">보러 가기 →</span>
+                      <span className="text-sm font-medium text-gold-300">신청하기 →</span>
                     </div>
                   </div>
                 </Link>
@@ -150,24 +169,6 @@ export default function ProductCarousel() {
             })}
           </div>
         </div>
-
-        {/* 좌우 화살표 (데스크톱 조작) */}
-        <button
-          type="button"
-          onClick={() => go(active - 1)}
-          aria-label="이전 상품"
-          className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-night-900/60 p-2 text-paper-100 backdrop-blur transition-colors hover:bg-night-900/90"
-        >
-          <ChevronLeft className="h-5 w-5" />
-        </button>
-        <button
-          type="button"
-          onClick={() => go(active + 1)}
-          aria-label="다음 상품"
-          className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-night-900/60 p-2 text-paper-100 backdrop-blur transition-colors hover:bg-night-900/90"
-        >
-          <ChevronRight className="h-5 w-5" />
-        </button>
       </div>
 
       {/* 점 인디케이터 (눌러서 이동) */}

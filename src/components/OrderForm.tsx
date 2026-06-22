@@ -56,15 +56,27 @@ export default function OrderForm({
     <form action={formAction} className="space-y-5">
       <input type="hidden" name="productId" value={product.id} />
 
-      {/* 선택한 상품 요약 */}
-      <div className="flex items-center justify-between gap-3 rounded-2xl border border-gold-500/40 bg-gold-500/10 p-4">
-        <div>
-          <p className="font-(family-name:--font-serif-kr) text-base font-bold text-gold-300">
-            {product.name}
-          </p>
-          <p className="mt-0.5 text-xs text-paper-400">{product.desc}</p>
+      {/* 선택한 상품 요약: 이름·가격·받아보는 내용(coverage) */}
+      <div className="rounded-2xl border border-gold-500/40 bg-gold-500/10 p-4">
+        <div className="flex items-center justify-between gap-3">
+          <div>
+            <p className="font-(family-name:--font-serif-kr) text-base font-bold text-gold-300">
+              {product.name}
+            </p>
+            <p className="mt-0.5 text-xs text-paper-400">{product.tagline ?? product.desc}</p>
+          </div>
+          <span className="shrink-0 text-lg font-bold text-paper-100">{formatPrice(product.price)}</span>
         </div>
-        <span className="shrink-0 text-lg font-bold text-paper-100">{formatPrice(product.price)}</span>
+        {product.coverage && product.coverage.length > 0 && (
+          <ul className="mt-3 space-y-1 border-t border-gold-500/20 pt-3">
+            {product.coverage.map((c, i) => (
+              <li key={i} className="flex gap-2 text-xs leading-relaxed text-paper-300">
+                <span className="text-gold-400">○</span>
+                <span>{c}</span>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
 
       {/* 신청자 정보 */}
