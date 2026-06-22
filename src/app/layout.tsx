@@ -55,11 +55,11 @@ export default function RootLayout({
                 개인정보처리방침
               </Link>
             </nav>
-            {/* 사업자 정보 — 운영자가 실제 신고 정보로 채워 넣을 것 (플레이스홀더) */}
+            {/* 사업자 정보 */}
             <div className="text-[11px] leading-relaxed text-paper-500">
-              <p>상호명: [상호] | 대표: [대표자명]</p>
-              <p>사업자등록번호: [번호] | 통신판매업 신고번호: [번호]</p>
-              <p>주소: [주소] | 연락처: [전화/이메일]</p>
+              <p>상호명: 사주의 길 | 대표: 문인구</p>
+              <p>사업자등록번호: 149-99-01744 | 통신판매업 신고번호: 2026-부산수영-0356</p>
+              <p>주소: 부산 수영구 수영로 541-1 1505호 | 연락처: moonine9696@gmail.com</p>
               <p className="mt-1">© 2026 사주의 길. All rights reserved.</p>
             </div>
           </div>
