@@ -6,14 +6,14 @@ export default function Home() {
     <div className="mx-auto max-w-xl px-4 pt-10 pb-8">
       <section className="text-center mb-9">
         <h1 className="font-(family-name:--font-serif-kr) text-3xl font-bold leading-snug text-paper-100">
-          태어난 순간의 하늘이
+          생년월일시 하나로
           <br />
-          담아둔 여덟 글자
+          당신이 어떤 사람인지 풀어드립니다
         </h1>
         <p className="mt-4 text-sm leading-relaxed text-paper-400">
-          생년월일시를 입력하시면 만세력으로 사주 명식을 계산해
+          태어난 시간으로 정확하게 계산한 내 사주,
           <br className="hidden sm:block" />
-          무료 미니풀이와 함께 보여드립니다.
+          지금 무료로 확인해보세요.
         </p>
       </section>
 
