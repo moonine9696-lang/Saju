@@ -166,7 +166,7 @@ export const PRODUCTS: Product[] = [
     type: "premium",
     price: 34900,
     persons: 1,
-    desc: "재물, 연애, 대운을 아우르는 종합 풀이 (약 100페이지)",
+    desc: "재물, 연애, 대운을 아우르는 종합 풀이 (수십 페이지)",
     tagline: "재물부터 연애, 일, 건강, 인연까지 삶 전체를 통합해 풀어드리는 최상위 분석입니다.",
     coverage: [
       "사주 전체 분석과 인생의 황금기",

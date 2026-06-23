@@ -8,7 +8,7 @@ const HOLDER = process.env.NEXT_PUBLIC_PAYMENT_ACCOUNT_HOLDER ?? "";
 const KAKAO = process.env.NEXT_PUBLIC_KAKAO_CHANNEL_URL ?? "";
 
 const PRODUCTS = {
-  pdf: { name: "정식 사주풀이 PDF", desc: "약 100페이지 분량의 상세 풀이", price: PRICE_PDF },
+  pdf: { name: "정식 사주풀이 PDF", desc: "수십 페이지 분량의 상세 풀이", price: PRICE_PDF },
   matching: { name: "사주 궁합 매칭", desc: "매칭 성사 시 진행되는 정식 궁합 분석", price: PRICE_MATCHING },
 } as const;
 
