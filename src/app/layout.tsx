@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Serif_KR, Noto_Sans_KR } from "next/font/google";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const serifKr = Noto_Serif_KR({
@@ -64,6 +65,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   );
